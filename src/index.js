@@ -4,6 +4,8 @@ import employeesRouter from './routes/employees.routes.js'
 
 const app = express();
 
-app.use(employeesRouter);
+app.use(express.json())
+
+app.use("/api",employeesRouter);
 
 app.listen(3000)
